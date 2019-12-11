@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Wavelet | Demo 1</title>
+    <link rel="stylesheet" href="site.css">
+    <script type="text/javascript" src="./libgif/libgif.js"></script>
+    <script type="text/javascript" src="./libgif/rubbable.js"></script>
+    <script src="site.js"></script>
+</head>
+<body>
+        <center>
+                <h1>Demo #1</h1>
+                <img id="example1" src="lights.gif" rel:animated_src="lights.gif" rel:auto_play="0" width="467" height="275" />
+                <br>
+                <script type="text/javascript">
+                    var sup1 = new SuperGif({ gif: document.getElementById('example1') } );
+                    sup1.load();
+                    function sleep(ms) {
+                        return new Promise(resolve => setTimeout(resolve, ms));
+                    }
+                    document.onkeydown = async function(event) {
+                        switch (event.keyCode) {
+                            case 16:
+                                sup1.move_to(2); await sleep(200);
+                                sup1.move_to(3); await sleep(90);
+                                sup1.move_to(2); await sleep(200);
+                                sup1.move_to(3); await sleep(300);
+                                sup1.move_to(4); break;
+                            case 17:
+                                sup1.move_to(0); break;
+                            case 37: 
+                                window.location.href = "demo2.html"; break;
+                            case 39:
+                                window.location.href = "demo2.html"; break;
+                        }
+                    };
+                </script>
+                <br><br>
+        </center>
+    
+</body>
+</html>
