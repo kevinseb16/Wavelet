@@ -32,7 +32,7 @@ while chk != 2:
 
 print("\nConnection established successfully! Starting up...")
 print("Press 'Ctrl+C' at any time to exit...\n")
-time.sleep(2)
+time.sleep(1)
 
 volstat=0
 
